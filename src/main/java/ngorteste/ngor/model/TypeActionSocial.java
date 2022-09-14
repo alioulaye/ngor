@@ -3,22 +3,22 @@ package ngorteste.ngor.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Data
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Groupesanguin {
+@Getter
+@Setter
+public class TypeActionSocial {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idGs;
-
+    private int id;
     private String libelle;
 
-    @OneToMany(mappedBy = "groupesanguin" , cascade = CascadeType.ALL)
-    private List<Habitant> habitants;
+    @OneToMany(mappedBy = "typeActionSocial",cascade =CascadeType.ALL )
+    private List<ActionSocial> actionSocials;
 
 }

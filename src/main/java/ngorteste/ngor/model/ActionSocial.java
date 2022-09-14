@@ -23,4 +23,9 @@ public class ActionSocial {
                 inverseJoinColumns = @JoinColumn(name = "idH"))
     private List<Habitant> habitantList = new ArrayList<>();
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "idT")
+    private TypeActionSocial typeActionSocial;
+
+
 }

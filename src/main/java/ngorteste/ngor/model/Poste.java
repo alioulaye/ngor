@@ -1,5 +1,6 @@
 package ngorteste.ngor.model;
 
+
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -13,10 +14,11 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Getter
 @Setter
-public class MaladieCategorie {
+public class Poste {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
-    private String libelle;
+    private String  libelle;
 }
